@@ -26,7 +26,7 @@ La première chose à faire est de créer une nouvelle application via l'interfa
 Créer un nouvel `Intent`, demandez à vos utilisateurs de dire :
 
 ```
-Quel est la couleur du cheval blanc d'Henry 4 ?
+Quelle est la couleur du cheval blanc d'Henry 4 ?
 ```
 
 Définissez une nouvelle réponse à votre convenance.
