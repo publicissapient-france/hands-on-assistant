@@ -1,7 +1,9 @@
-# Hands'On Assistant
-> Talk XKE novembre 2017
+# Hands-On Assistant
 
-## Choisissez votre assistant :
+- [Slide for Google Assistant](https://docs.google.com/presentation/u/1/d/12_m04yZxrue1oUDJddaCfJd_UAuNDPkzlTOhK716-YY/edit?usp=drive_web)
+- [Slide for Alexa](https://docs.google.com/a/xebia.fr/presentation/d/11HKDcjdbRxAitrWZTK16DXYEEOePF50e3QWepv34e8o/edit?usp=sharing)
 
-1. [Google Assistant](handson/ga/create-project-intent.md)
-2. [Alexa](handson/alexa/README.md)
+## Choose the assistant you want to discvoer:
+
+- [Google Assistant](google-assistant/README.md)
+- [Amazon Alexa](alexa/README.md)
