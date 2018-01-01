@@ -51,21 +51,95 @@ Let's stay with DialogFlow V1 API because V2 is still in beta and not very stabl
 Agents are best described as NLU (Natural Language Understanding) modules. If you
 want to know about the concept, read the document [here](https://dialogflow.com/docs/agents).
 
-## 2. Define and create an `Entity`
+## 2. Create your first `Entity`
 
 First let's get an idea of [what does an `Entity` represent in DialogFlow](https://dialogflow.com/docs/entities).
 
 Now that you are ready to create your own entity, go to the `Entities` tab from 
-the left side menu. The entity in our recipe assistant is apparently the ingredient! 
-So start by create this and add some entries that you can think of.
+the left side menu. The entity in our recipe assistant example is apparently the ingredient! 
+So start by creating this entity and adding some entries that you can think of.
 
-## 3. Define an `Intent`
+## 3. Create your first `Intent`
 
-## 4. Fulfill a user intention
+An [intent](https://dialogflow.com/docs/intents) represents a mapping between what
+a user says and what action should be taken by your software. In the agent that
+you just created, there is already a `Default Welcome Intent` and a 
+`Default Fallback Intent`. 
 
-### 4.1 Set up your Webhook
+In the creation of Intent screen you will see following sections (from top to bottom):
 
-Firebase functions
+### Contexts
+
+Contexts are designed for passing on information from previous conversations 
+or external sources (e.g., user profile, device information, etc). This is a
+relatively advanced concept. You can discover it later when you have several 
+working intents.
+
+### User says
+
+In order to obtain an optimized result, you should at least provide around 10-20 
+sentences for the same intent. When you are entering the user expression, you 
+will notice that you can annotate words as entities:
+
+![intent-user-says](screenshots/intent-user-says.png)
+
+You can check [here](https://dialogflow.com/docs/intents#example_annotation) to
+understand better how to link a word (or phrase) to an entity.
+
+### Action
+
+Once you finish defining what user says, you have to name your action manually. 
+It will be the trigger word for your app to perform a particular action. Parameters 
+can be filled in automatically from the ‘Users says’ examples and templates, 
+or added manually.
+
+See detailed documentation[here](https://dialogflow.com/docs/actions-and-parameters).
+
+### Response
+
+In this section, you can define your agent’s responses which will be provided 
+by your application when the intent is triggered. It can be simple text, or more
+sophisticated text with references to parameter values.
+
+You can also add supported [rich messages](https://dialogflow.com/docs/rich-messages),
+such as integration with facebook or slack.
+
+#### SSML (Speech Synthesis Markup language)
+
+If you want to embed some audio file and structure your reponse in a more logic
+way, you can have a look at [Speech Synthesis Markup Language](https://developers.google.com/actions/reference/ssml).
+
+Here is a simple example:
+
+```xml
+<speak>
+  Here are <say-as interpret-as="characters">SSML</say-as> samples.
+  I can pause <break time="3s"/>.
+  I can play a sound
+  <audio src="https://www.example.com/MY_MP3_FILE.mp3">didn't get your MP3 audio file</audio>.
+  I can speak in cardinals. Your number is <say-as interpret-as="cardinal">10</say-as>.
+  Or I can speak in ordinals. You are <say-as interpret-as="ordinal">10</say-as> in line.
+  Or I can even speak in digits. The digits for ten are <say-as interpret-as="characters">10</say-as>.
+  I can also substitute phrases, like the <sub alias="World Wide Web Consortium">W3C</sub>.
+  Finally, I can speak a paragraph with two sentences.
+  <p><s>This is sentence one.</s><s>This is sentence two.</s></p>
+</speak>
+```
+
+At the end you can save your Intent and try to test it out.
+
+## 4. Fulfill user intentions using webhook
+
+As you reach the end of the `Intent` creation, you will see the section **Fulfillment**.
+
+![intent-fulfillment](screenshots/intent-fulfillment.png)
+
+This is actually the entry to infinite possibilities, because you are able to
+fulfill user intentions with your own backend logic!
+
+Now check the case `Use Webhook` and start to work on your own fulfillment!
+
+### 4.1 Set up your Webhook with Firebase functions
 
 Make sure you have firebase tools installed 
 
@@ -95,20 +169,19 @@ and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost
 
 ### 4.2 Implement a fulfillment
 
+The example folder contains a simple skeleton with firebase functions & [DialogFlow](https://github.com/actions-on-google/actions-on-google-nodejs) Node.js SDK.
+
+## 5. Test your fulfillment
+
 // TODO
 
-https://github.com/actions-on-google/actions-on-google-nodejs
+### 5.1 Complete your application's information
 
-## 5. Test your fulfillment 
+### 5.2 Test with Simulator
 
-### Simulator
+### 5.3 Test with physical device (Google Home / Android)
 
-### Device (Google Home / Android)
+## 6. Context & Firebase database
 
-## 6. Firebase database?
-
-
-# TODO:
-- SSML
-- Deploy to device
+// TODO
 
