@@ -51,6 +51,9 @@ Let's stay with DialogFlow V1 API because V2 is still in beta and not very stabl
 Agents are best described as NLU (Natural Language Understanding) modules. If you
 want to know about the concept, read the document [here](https://dialogflow.com/docs/agents).
 
+Also pay attention to your default language because all the content you are going
+to create afterwards are language specific.
+
 ## 2. Create your first `Entity`
 
 First let's get an idea of [what does an `Entity` represent in DialogFlow](https://dialogflow.com/docs/entities).
@@ -171,15 +174,40 @@ and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost
 
 The example folder contains a simple skeleton with firebase functions & [DialogFlow](https://github.com/actions-on-google/actions-on-google-nodejs) Node.js SDK.
 
+Now it's time to release your imagination and create some fulfillment on your 
+own.
+
+#### Rich UI
+
+You can try following types of UIs in your fulfillment:
+
+- [Basic card](https://developers.google.com/actions/assistant/responses#basic_card)
+- [List Selector](https://developers.google.com/actions/assistant/responses#list_selector)
+- or even a [Carousel](https://developers.google.com/actions/assistant/responses#carousel_selector)
+
+#### Mash up with other API
+
+There are quite a lot food API out there. So maybe mashup the user intention
+you extracted and come up with some nice suggestion?
+
 ## 5. Test your fulfillment
 
-// TODO
+In order to test your fulfillment, go to `Integrations` on the left menu and 
+click on the Google Assistant. Add the intent you want to test and go on.
+
+You should then be redirected to the simulator screen.
+
+You can either test directly in the simulator by typing text or speaking. Or 
+you can test on any of your physical device (Google Home / Android) which is 
+connected with your current Google account. For Android device, you have to 
+download [Google Assistant](https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant&hl=en)
+from Play Store.
 
 ### 5.1 Complete your application's information
 
-### 5.2 Test with Simulator
-
-### 5.3 Test with physical device (Google Home / Android)
+You might notice that you are talking to your `Test App` for now, if you want
+your application to have a more personalized name, you will have to fill up
+your application information and update welcome intent.
 
 ## 6. Context & Firebase database
 
