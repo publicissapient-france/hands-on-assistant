@@ -7,3 +7,12 @@
 
 - [Google Assistant](google-assistant/README.md)
 - [Amazon Alexa](alexa/README.md)
+
+## Extra Fun
+
+For this Hands-On, some other widgets are available if you want to try to manipulate 
+connected objects with Google Assistant & Alexa:
+
+- Several [Philips Hue](https://www2.meethue.com/en-us) lightbulbs (Thanks Pablo :D)
+- A Raspberry Pi 3 
+- A NXP Pico i.MX7D Android Things Kit
