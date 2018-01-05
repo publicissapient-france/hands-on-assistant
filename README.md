@@ -8,6 +8,9 @@
 - [Google Assistant](google-assistant/README.md)
 - [Amazon Alexa](alexa/README.md)
 
+> Attention: Google Assistant supports currently English and French. Alexa only
+supports English
+
 ## Extra Fun
 
 For this Hands-On, some other widgets are available if you want to try to manipulate 

@@ -229,7 +229,44 @@ lines.
 
 ![app-information](screenshots/app-information.png)
 
-## 6. Context & Firebase database
+## 6. Context
+
+Continue with our recipe example, a user might say, "I have eggplant.", followed
+by "what can I cook with it?". By setting a context the app will understand that 
+the `it` in second phrase is referring to the `eggplant` from the first request.
+
+By default, contexts expire after either five requests or ten minutes from the 
+time they were activated. 
+
+Our recipe assistant is not the perfect example to try out context. You can 
+think of something else to play with the context.
+
+## 7. Identity
+
+You must also be interested to know how to build an application with richier 
+experience for your users. We will briefly mention 2 ways to achieve that:
+
+### Anonymous User Identity
+
+// TODO
+
+```javascript
+const { DialogflowApp } = require('actions-on-google');
+const app = new DialogflowApp({ request: req, response: res });
+const userId = app.getUser().userId;
+```
+
+### Account linking
+
+Account linking helps you build richer experiences for your users by taking 
+advantage of the data they already have in their account.
+
+// TODO
+
+# Annexes
+
+- [Actions on Google Node.js reference](https://developers.google.com/actions/reference/nodejs/AssistantApp)
+
 
 
 
