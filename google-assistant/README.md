@@ -69,14 +69,14 @@ a user says and what action should be taken by your software. In the agent that
 you just created, there is already a `Default Welcome Intent` and a 
 `Default Fallback Intent`. 
 
-In the creation of Intent screen you will see following sections (from top to bottom):
+Here are the sections to fill up in the Intent creation screen (from top to bottom):
 
 ### Contexts
 
-Contexts are designed for passing on information from previous conversations 
-or external sources (e.g., user profile, device information, etc). This is a
-relatively advanced concept. You can discover it later when you have several 
-working intents.
+[Contexts](https://dialogflow.com/docs/contexts) are designed for passing on 
+information from previous conversations or external sources (e.g., user profile, 
+device information, etc). This is a relatively advanced concept. You can discover 
+it later when you have several working intents.
 
 ### User says
 
@@ -89,20 +89,26 @@ will notice that you can annotate words as entities:
 You can check [here](https://dialogflow.com/docs/intents#example_annotation) to
 understand better how to link a word (or phrase) to an entity.
 
+For our recipe example, user problably would say things like:
+
+- "I have eggs and potatos in my fridge."
+- "I want to cook something with eggplant and parmesan."
+- "What can I make with cauliflower?"
+
 ### Action
 
 Once you finish defining what user says, you have to name your action manually. 
 It will be the trigger word for your app to perform a particular action. Parameters 
-can be filled in automatically from the ‘Users says’ examples and templates, 
+can be filled in automatically from the `Users says` examples and templates, 
 or added manually.
 
-See detailed documentation[here](https://dialogflow.com/docs/actions-and-parameters).
+See detailed documentation [here](https://dialogflow.com/docs/actions-and-parameters).
 
 ### Response
 
 In this section, you can define your agent’s responses which will be provided 
 by your application when the intent is triggered. It can be simple text, or more
-sophisticated text with references to parameter values.
+sophisticated content with references to parametered values.
 
 You can also add supported [rich messages](https://dialogflow.com/docs/rich-messages),
 such as integration with facebook or slack.
@@ -129,7 +135,16 @@ Here is a simple example:
 </speak>
 ```
 
-At the end you can save your Intent and try to test it out.
+- `<speak>`: The root element of the SSML response. 
+- `<break>`: An empty element that controls pausing or other prosodic boundaries between words.
+- `<say‑as>`: This indicates information about the type of text construct that is 
+contained within the element.
+- `<audio> `: Supports the insertion of recorded audio files and the insertion 
+of other audio formats in conjunction with synthesized speech output.
+
+At the end you can save your Intent and test it with the test console on the
+right side of the DialogFlow console or directly with Google Assistant simulator
+or device (see the [step 5](https://github.com/xebia-france/hands-on-assistant/tree/master/google-assistant#5-test-your-fulfillment)).
 
 ## 4. Fulfill user intentions using webhook
 
@@ -190,10 +205,10 @@ You can try following types of UIs in your fulfillment:
 There are quite a lot food API out there. So maybe mashup the user intention
 you extracted and come up with some nice suggestion?
 
-## 5. Test your fulfillment
+## 5. Test your application
 
-In order to test your fulfillment, go to `Integrations` on the left menu and 
-click on the Google Assistant. Add the intent you want to test and go on.
+In order to test your intent and fulfillment, go to `Integrations` on the left 
+menu and click on the Google Assistant. Add the intent you want to test and go on.
 
 You should then be redirected to the simulator screen.
 
@@ -205,11 +220,16 @@ from Play Store.
 
 ### 5.1 Complete your application's information
 
-You might notice that you are talking to your `Test App` for now, if you want
-your application to have a more personalized name, you will have to fill up
-your application information and update welcome intent.
+You might notice that, in order to activate your application, you have tell 
+Google to talk to your `Test App`, if you want your application to have a more 
+user-friendly name, you will have to fill up your application information.
+
+You can also update the default welcome intent to have more personalized opening
+lines.
+
+![app-information](screenshots/app-information.png)
 
 ## 6. Context & Firebase database
 
-// TODO
+
 
