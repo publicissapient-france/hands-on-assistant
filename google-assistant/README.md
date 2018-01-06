@@ -244,6 +244,13 @@ to get you started.
 Have a look and start to map your actions and parameters. Now it's time to release 
 your imagination and create some fulfillment on your own.
 
+Start by:
+
+- name your action on DialogFlow and add it to your app
+- implement a simple fulfillment function
+- name your parameter on DialogFlow andd add it to your app
+- get the argument in your fulfillment function and do something with it
+
 Here is the [API for Actions on Google Node.js SDK](https://developers.google.com/actions/reference/nodejs/AssistantApp).
 
 #### Make your app say or tell
