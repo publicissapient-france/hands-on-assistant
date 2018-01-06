@@ -152,25 +152,69 @@ As you reach the end of the `Intent` creation, you will see the section **Fulfil
 
 ![intent-fulfillment](screenshots/intent-fulfillment.png)
 
-This is actually the entry to infinite possibilities, because you are able to
-fulfill user intentions with your own backend logic!
+This is actually the entry point to infinite possibilities, because you are able to
+fulfill user's intentions with your own backend logic!
 
-Now check the case `Use Webhook` and start to work on your own fulfillment!
+Now check the case `Use Webhook` and start to work on your own fulfillment! In
+this Hands-On we are introducing [Firebase Cloud Function](https://firebase.google.com/docs/functions/)
+to deploy your backend logic. If you feel more comfortable working with other 
+solutions, you can totally go with your own choice.
 
 ### 4.1 Set up your Webhook with Firebase functions
 
-Make sure you have firebase tools installed 
+We will be using Firebase CLI to achieve most of the tasks, so let's start 
+by installing firebase tools:
 
 ```
 $ npm install -g firebase-tools
 ```
 
 Then login with your Goolge account which contains your assistant project:
+
 ```
 $ firebase login
 ```
 
-Deploy your functions with following line and retrieve your deploy link
+Then run following line to initialize a cloud function project:
+
+```
+$ firebase init functions
+```
+
+If you also want to use other firebase products (e.g. real time database), 
+you can try this:
+
+```
+$ firebase init
+```
+
+Then you can choose from the prompt the ones you need:
+
+```
+? Which Firebase CLI features do you want to setup for this folder? Press Space to select features, t
+hen Enter to confirm your choices. (Press <space> to select)
+❯◯ Database: Deploy Firebase Realtime Database Rules
+ ◯ Firestore: Deploy rules and create indexes for Firestore
+ ◯ Functions: Configure and deploy Cloud Functions
+ ◯ Hosting: Configure and deploy Firebase Hosting sites
+ ◯ Storage: Deploy Cloud Storage security rules
+```
+
+Once your project is initialized, you can go to `index.js` and uncomment the 
+example lines to get your app going:
+
+```
+const functions = require('firebase-functions');
+
+exports.helloWorld = functions.https.onRequest((request, response) => {
+ response.send("Hello from Firebase!");
+});
+```
+
+If you need more help on how to get started with cloud function, documentation 
+is [here](https://firebase.google.com/docs/functions/get-started).
+
+Now Deploy your functions with following line and retrieve your deploy link
 ```
 $ firebase deploy
 ```
@@ -183,14 +227,32 @@ To accelerate the test, you can serve your function locally:
 ```
 $ firebase serve --only functions
 ```
-and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost
+and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost.
+You just have to download the software and launch it with your localhost port:
+
+```
+./ngrok http [port]
+```
+
+Then you can use the tunnel url as your webhook url.
 
 ### 4.2 Implement a fulfillment
 
-The example folder contains a simple skeleton with firebase functions & [DialogFlow](https://github.com/actions-on-google/actions-on-google-nodejs) Node.js SDK.
+The example folder contains a simple [`index.js`](example/functions/index.js) with firebase functions & [DialogFlow](https://github.com/actions-on-google/actions-on-google-nodejs) Node.js SDK already set up and most essential lines
+to get you started.
 
-Now it's time to release your imagination and create some fulfillment on your 
-own.
+Have a look and start to map your actions and parameters. Now it's time to release 
+your imagination and create some fulfillment on your own.
+
+Here is the [API for Actions on Google Node.js SDK](https://developers.google.com/actions/reference/nodejs/AssistantApp).
+
+#### Make your app say or tell
+
+```
+app.ask("Hey, what kind of cuisine do you prefere?")
+
+app.tell("You can make a tortilla with potato and eggs!")
+```
 
 #### Rich UI
 
