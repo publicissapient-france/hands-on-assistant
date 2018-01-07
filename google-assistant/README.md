@@ -238,11 +238,13 @@ Then you can use the tunnel url as your webhook url.
 
 ### 4.2 Implement a fulfillment
 
-The example folder contains a simple [`index.js`](example/functions/index.js) with firebase functions & [DialogFlow](https://github.com/actions-on-google/actions-on-google-nodejs) Node.js SDK already set up and most essential lines
-to get you started.
+Now that your backend is up and running, time to start playing with actions
+on Google SDK.
 
-Have a look and start to map your actions and parameters. Now it's time to release 
-your imagination and create some fulfillment on your own.
+First of all, add the dependency for [actions-on-google SDK](https://www.npmjs.com/package/actions-on-google)
+in your `package.json`. Then have a look at the example [`index.js`](example/functions/index.js)
+included in the project, which contains a simple example of DialogFlow app with
+essential lines to get you started.
 
 Start by:
 
@@ -252,6 +254,8 @@ Start by:
 - get the argument in your fulfillment function and do something with it
 
 Here is the [API for Actions on Google Node.js SDK](https://developers.google.com/actions/reference/nodejs/AssistantApp).
+
+Now it's time to release your imagination and create some fulfillment on your own.
 
 #### Make your app say or tell
 
