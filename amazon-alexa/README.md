@@ -1,5 +1,5 @@
-Alexa Voice Service
-===================
+Amazon Alexa
+============
 
 For this part of the hands-on, we will start by playing with the Amazon Echo to
 get a better understanding of Alexa. Then we will continue to build a more comprehensive
@@ -23,7 +23,7 @@ You’ll end with a simple but complete Alexa skill that can run on Amazon Echo 
 any device with Alexa. This tutorial uses the [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit), 
 [AWS Lambda](https://aws.amazon.com/lambda/), and Python.
 
-See here: [Alexa Python Tutorial](https://developer.amazon.com/alexa-skills-kit/alexa-skill-quick-start-tutorial)
+See here to get started: [Alexa Python Tutorial](https://developer.amazon.com/alexa-skills-kit/alexa-skill-quick-start-tutorial)
 
 The screenshots in the tutorial may not be exactly the same as the lastest AWS
 console but you should be able to finish it without problem. At the end, you can
@@ -31,7 +31,19 @@ go to their new testing simulator and test your Alexa skill:
 
 ![alexa-testing-simulator](screenshots/alexa-testing-simulator.png)
 
-# Exercise 2: 
+This exercise should take you roughly *10min* to finish. Now let's discover how
+to use the **Interaction Model Builder** with another exercise.
+
+# Exercise 2: Decision Tree Sample (Node.js)
+
+An Alexa Skill Sample for building a skill that can take a user through a decision 
+tree, like "What should I eat for breakfast?"
+
+See here to get started: [Decision tree sample](https://github.com/alexa/skill-sample-nodejs-decision-tree)
+
+In this tutorial you will be using the Interaction model builder:
+
+![interaction-model-builder](screenshots/alexa-interaction-model-builder.png)
 
 # Resource
 
