@@ -34,7 +34,7 @@ go to their new testing simulator and test your Alexa skill:
 This exercise should take you roughly *10min* to finish. Now let's discover how
 to use the **Interaction Model Builder** with another exercise.
 
-# Exercise 2: Decision Tree Sample (Node.js)
+# Exercise 2: Alexa Fact Sample (Node.js)
 
 This Alexa sample skill is a template for a basic fact skill. Provided a list of 
 interesting facts about a topic, Alexa will select a fact at random and tell it 
@@ -42,7 +42,21 @@ to the user when the skill is invoked.
 
 See here to get started: [Alexa Fact sample](https://github.com/alexa/skill-sample-nodejs-fact)
 
-In this tutorial you will be using the Interaction model builder.
+In this tutorial you will be using the Interaction model builder and pay attention
+to the intent generated once you copy paste and save the model from template.
+
+# Exercise 3: Random Cat Fact
+
+Now you have a Fact skill up and running, you might notice that it only deals
+with either *fact* or *space fact*. Let's try to make it better, start by:
+
+- create your own slot type (e.g. `faceType` with a list of face type possible)
+- update your intent to get the fact type dynamically
+- update your backend logic to plug some random cat fact using this awesome
+[API](https://catfact.ninja/)
+
+So now whenever someone asks Alexa about cat fact, your skill can give out some
+random fun fact :)
 
 # Resource
 
