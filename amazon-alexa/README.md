@@ -36,16 +36,16 @@ to use the **Interaction Model Builder** with another exercise.
 
 # Exercise 2: Decision Tree Sample (Node.js)
 
-An Alexa Skill Sample for building a skill that can take a user through a decision 
-tree, like "What should I eat for breakfast?"
+This Alexa sample skill is a template for a basic fact skill. Provided a list of 
+interesting facts about a topic, Alexa will select a fact at random and tell it 
+to the user when the skill is invoked.
 
-See here to get started: [Decision tree sample](https://github.com/alexa/skill-sample-nodejs-decision-tree)
+See here to get started: [Alexa Fact sample](https://github.com/alexa/skill-sample-nodejs-fact)
 
-In this tutorial you will be using the Interaction model builder:
-
-![interaction-model-builder](screenshots/alexa-interaction-model-builder.png)
+In this tutorial you will be using the Interaction model builder.
 
 # Resource
 
 - [Amazon Alexa Portail](https://developer.amazon.com/alexa)
-- [Announcing New Test Simulator (Beta) for Alexa Skills](https://developer.amazon.com/blogs/alexa/post/577069bd-d9f9-439a-b4bf-3b0495e3d24b/announcing-new-test-simulator-beta-for-alexa-skills)
+- [Amazon Developer Console](https://developer.amazon.com/edw/home.html#/)
+- [AWS Console](https://console.aws.amazon.com/)
