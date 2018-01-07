@@ -345,6 +345,9 @@ Try to get name and address of the user by using Helper: [User Information/Helpe
 
 Add an Intent to tell to the user his name and his address.
 
-# Annexes
+# Resource
 
 - [Actions on Google Node.js reference](https://developers.google.com/actions/reference/nodejs/AssistantApp)
+- [Actions on Google github](https://github.com/actions-on-google): discover a lot more samples
+- [Xebia Home Assistant](https://github.com/xebia-france/xebia-home-assistant/) developped by Pablo & Benjamin
+- [Codelab: Build an App for the Google Assistant with Firebase and Dialogflow](https://codelabs.developers.google.com/codelabs/assistant-codelab/index.html)
