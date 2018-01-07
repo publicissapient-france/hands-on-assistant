@@ -62,6 +62,8 @@ Now that you are ready to create your own entity, go to the `Entities` tab from
 the left side menu. The entity in our recipe assistant example is apparently the ingredient! 
 So start by creating this entity and adding some entries that you can think of.
 
+> for example, create `eggs` and `potatoes` (for tortilla recipe)
+
 ## 3. Create your first `Intent`
 
 An [intent](https://dialogflow.com/docs/intents) represents a mapping between what
@@ -188,7 +190,7 @@ you can try this:
 $ firebase init
 ```
 
-Then you can choose from the prompt the ones you need:
+Then you can choose from the prompt the ones you need (choose `Functions`):
 
 ```
 ? Which Firebase CLI features do you want to setup for this folder? Press Space to select features, t
@@ -231,7 +233,8 @@ and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost.
 You just have to download the software and launch it with your localhost port:
 
 ```
-./ngrok http [port]
+npm install -g ngrok
+ngrok http [port]
 ```
 
 Then you can use the tunnel url as your webhook url.
@@ -278,6 +281,9 @@ You can try following types of UIs in your fulfillment:
 There are quite a lot food API out there. So maybe mashup the user intention
 you extracted and come up with some nice suggestion?
 
+> Due to Google Functions pricing https://firebase.google.com/pricing/ you cannot do outbound networking when you have a free plan.
+> Continue testing on `localhost` to be able to connect to outbound API.
+
 ## 5. Test your application
 
 In order to test your intent and fulfillment, go to `Integrations` on the left 
@@ -321,25 +327,24 @@ experience for your users. We will briefly mention 2 ways to achieve that:
 
 ### Anonymous User Identity
 
-// TODO
-
 ```javascript
 const { DialogflowApp } = require('actions-on-google');
 const app = new DialogflowApp({ request: req, response: res });
 const userId = app.getUser().userId;
 ```
 
-### Account linking
+See more: [User Information/Anonymous User Identity](https://developers.google.com/actions/identity/user-info)
 
-Account linking helps you build richer experiences for your users by taking 
-advantage of the data they already have in their account.
+Add an Intent to tell to the user his anonymous id.
 
-// TODO
+### User infos
+
+It can be hard in natural langage to ask for permission to get name and address. To do so, the Assistant provides a built-in dialog that requests this information from users, allows them to consent to providing the information, and then provides you the information in the next request to your fulfillment endpoint.
+
+Try to get name and address of the user by using Helper: [User Information/Helper](https://developers.google.com/actions/assistant/helpers#user_information)
+
+Add an Intent to tell to the user his name and his address.
 
 # Annexes
 
 - [Actions on Google Node.js reference](https://developers.google.com/actions/reference/nodejs/AssistantApp)
-
-
-
-
