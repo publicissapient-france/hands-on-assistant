@@ -284,6 +284,12 @@ you extracted and come up with some nice suggestion?
 > Due to Google Functions pricing https://firebase.google.com/pricing/ you cannot do outbound networking when you have a free plan.
 > Continue testing on `localhost` to be able to connect to outbound API.
 
+Give a look to:
+- [Edaman Recipe Search API](https://developer.edamam.com/edamam-docs-recipe-api)
+- [Spoonacular](https://market.mashape.com/spoonacular/recipe-food-nutrition#find-by-ingredients)
+- [Food2Work](https://food2fork.com/about/api)
+- [ThemMealDb](http://www.themealdb.com/api.php)
+
 ## 5. Test your application
 
 In order to test your intent and fulfillment, go to `Integrations` on the left 
