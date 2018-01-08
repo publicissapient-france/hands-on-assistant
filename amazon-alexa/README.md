@@ -58,6 +58,14 @@ with either *fact* or *space fact*. Let's try to make it better, start by:
 So now whenever someone asks Alexa about cat fact, your skill can give out some
 random fun fact :)
 
+# Exercise 4: Alexa Voice Service Sample
+
+If you still have time and you want to see how to access and test the Alexa Voice
+Service using a Java client and Nods.js server. [Here](https://github.com/alexa/alexa-avs-sample-app)
+is a step-by-step instructions to set up the hands-free prototype on Raspberry Pi, 
+or follow the instructions to set up the push-to-talk only prototype on Linux, 
+Mac, or Windows.
+
 # Resource
 
 - [Amazon Alexa Portail](https://developer.amazon.com/alexa)
