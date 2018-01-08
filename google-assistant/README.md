@@ -195,9 +195,9 @@ Then you can choose from the prompt the ones you need (choose `Functions`):
 ```
 ? Which Firebase CLI features do you want to setup for this folder? Press Space to select features, t
 hen Enter to confirm your choices. (Press <space> to select)
-❯◯ Database: Deploy Firebase Realtime Database Rules
+ ◯ Database: Deploy Firebase Realtime Database Rules
  ◯ Firestore: Deploy rules and create indexes for Firestore
- ◯ Functions: Configure and deploy Cloud Functions
+❯◯ Functions: Configure and deploy Cloud Functions
  ◯ Hosting: Configure and deploy Firebase Hosting sites
  ◯ Storage: Deploy Cloud Storage security rules
 ```
@@ -217,6 +217,7 @@ If you need more help on how to get started with cloud function, documentation
 is [here](https://firebase.google.com/docs/functions/get-started).
 
 Now Deploy your functions with following line and retrieve your deploy link
+
 ```
 $ firebase deploy
 ```
@@ -235,8 +236,8 @@ and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost.
 You just have to download the software and launch it with your localhost port:
 
 ```
-npm install -g ngrok
-ngrok http 5000 (default port)
+$ npm install -g ngrok
+$ ngrok http 5000 (default port)
 ```
 
 Then you can use the tunnel url as your webhook url.
@@ -244,7 +245,7 @@ Then you can use the tunnel url as your webhook url.
 > If you got an error about `grpc` install grpc and use Node.js `6.11.5`:
 
 ```
-npm install -DE grpc
+$ npm install -DE grpc
 ```
 
 ### 4.2 Implement a fulfillment
@@ -256,7 +257,7 @@ First of all, add the dependency for [actions-on-google SDK](https://www.npmjs.c
 in your `package.json`. 
 
 ```
-npm install -SE actions-on-google
+$ npm install -SE actions-on-google
 ```
 
 Then have a look at the example [`index.js`](example/functions/index.js) included in the project, which contains a simple example of DialogFlow app with essential lines to get you started.
