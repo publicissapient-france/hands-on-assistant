@@ -21,7 +21,7 @@ The easiest way is to use their web site: https://alexa.amazon.com
 Start building for Alexa with this quick walkthrough of the skill-building process. 
 You’ll end with a simple but complete Alexa skill that can run on Amazon Echo or 
 any device with Alexa. This tutorial uses the [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit), 
-[AWS Lambda](https://aws.amazon.com/lambda/), and Python.
+[AWS Lambda](https://aws.amazon.com/lambda/) and Python.
 
 See here to get started: [Alexa Python Tutorial](https://developer.amazon.com/alexa-skills-kit/alexa-skill-quick-start-tutorial)
 
@@ -50,7 +50,7 @@ to the intent generated once you copy paste and save the model from template.
 Now you have a Fact skill up and running, you might notice that it only deals
 with either *fact* or *space fact*. Let's try to make it better, start by:
 
-- create your own slot type (e.g. `faceType` with a list of face type possible)
+- create your own slot type (e.g. `factType` with a list of possible fact type)
 - update your intent to get the fact type dynamically
 - update your backend logic to plug some random cat fact using this awesome
 [API](https://catfact.ninja/)
