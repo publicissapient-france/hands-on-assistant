@@ -6,7 +6,7 @@
 ## Get Started
 
 - [Google Assistant](google-assistant/README.md)
-- [Amazon Alexa](alexa/README.md)
+- [Amazon Alexa](amazon-alexa/README.md)
 
 There will be enough time to finish both hands-on. But if you are more interested 
 by one of the platforms and want to go further, it's totally fine.
