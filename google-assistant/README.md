@@ -234,7 +234,7 @@ You just have to download the software and launch it with your localhost port:
 
 ```
 npm install -g ngrok
-ngrok http [port]
+ngrok http 5000 (default port)
 ```
 
 Then you can use the tunnel url as your webhook url.
