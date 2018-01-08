@@ -239,7 +239,7 @@ ngrok http 5000 (default port)
 
 Then you can use the tunnel url as your webhook url.
 
-> If you got an error about `grpc` install grpc:
+> If you got an error about `grpc` install grpc and use Node.js `6.11.5`:
 
 ```
 npm install -DE grpc
