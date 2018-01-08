@@ -249,6 +249,10 @@ in your `package.json`. Then have a look at the example [`index.js`](example/fun
 included in the project, which contains a simple example of DialogFlow app with
 essential lines to get you started.
 
+```
+npm install -SE actions-on-google
+```
+
 Start by:
 
 - name your action on DialogFlow and add it to your app
