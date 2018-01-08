@@ -226,9 +226,11 @@ Go to Fulfillment and update your webhook link.
 #### Test with localhost
 
 To accelerate the test, you can serve your function locally:
+
 ```
-$ firebase serve --only functions
+$ npm run serve
 ```
+
 and use [ngrok](https://ngrok.com/) to create a secure tunnel to your localhost.
 You just have to download the software and launch it with your localhost port:
 
@@ -251,13 +253,13 @@ Now that your backend is up and running, time to start playing with actions
 on Google SDK.
 
 First of all, add the dependency for [actions-on-google SDK](https://www.npmjs.com/package/actions-on-google)
-in your `package.json`. Then have a look at the example [`index.js`](example/functions/index.js)
-included in the project, which contains a simple example of DialogFlow app with
-essential lines to get you started.
+in your `package.json`. 
 
 ```
 npm install -SE actions-on-google
 ```
+
+Then have a look at the example [`index.js`](example/functions/index.js) included in the project, which contains a simple example of DialogFlow app with essential lines to get you started.
 
 Start by:
 
