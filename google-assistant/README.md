@@ -239,6 +239,12 @@ ngrok http [port]
 
 Then you can use the tunnel url as your webhook url.
 
+> If you got an error about `grpc` install grpc:
+
+```
+npm install -DE grpc
+```
+
 ### 4.2 Implement a fulfillment
 
 Now that your backend is up and running, time to start playing with actions
