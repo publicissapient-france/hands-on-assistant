@@ -3,14 +3,14 @@ Hands-on: Google Assistant app with Actions on Google
 
 # Objective
 
-The objectif of this hands-on session is to create a conversational application 
+The objective of this hands-on session is to create a conversational application 
 for Google Assistant using [Actions on Google](https://developers.google.com/actions/).
 
 Before start, let's clarify some concepts:
 
 - **The Google Assistant**: A conversation between you and Google that helps you get more done in your world.
 - **Google Home**: an assistant-enabled smart speaker. Android phones also have the assistant enabled.
-- **Actions On Google**: The platform that enables developers to build apps for the Google Assistant. Currently you can use Dialogflow, Actions SDK & Converse.ai to create custom app.
+- **Actions On Google**: The platform that enables developers to build apps for the Google Assistant. Currently you can use DialogFlow, Actions SDK & Converse.ai to create custom app.
 
 Among different solutions provided by Actions on Google, we are going to use 
 [DialogFlow](https://console.dialogflow.com/api-client/) and [Firebase](https://console.firebase.google.com/)
@@ -24,7 +24,7 @@ simple conversation example could be:
 ```
 User: OK Google, talk to Recipe Assistant
 Google: Okay here is the Recipe Assistant
-User: I have eggs and potatos in my fridge, what can I make?
+User: I have eggs and potatoes in my fridge, what can I make?
 Recipe Assistant: Tortilla! Do you want more information?
 User: Good idea! Thank you.
 ```
@@ -91,9 +91,9 @@ will notice that you can annotate words as entities:
 You can check [here](https://dialogflow.com/docs/intents#example_annotation) to
 understand better how to link a word (or phrase) to an entity.
 
-For our recipe example, user problably would say things like:
+For our recipe example, user probably would say things like:
 
-- "I have eggs and potatos in my fridge."
+- "I have eggs and potatoes in my fridge."
 - "I want to cook something with eggplant and parmesan."
 - "What can I make with cauliflower?"
 
@@ -110,14 +110,14 @@ See detailed documentation [here](https://dialogflow.com/docs/actions-and-parame
 
 In this section, you can define your agent’s responses which will be provided 
 by your application when the intent is triggered. It can be simple text, or more
-sophisticated content with references to parametered values.
+sophisticated content with references to parameterized values.
 
 You can also add supported [rich messages](https://dialogflow.com/docs/rich-messages),
 such as integration with facebook or slack.
 
 #### SSML (Speech Synthesis Markup language)
 
-If you want to embed some audio file and structure your reponse in a more logic
+If you want to embed some audio file and structure your response in a more logic
 way, you can have a look at [Speech Synthesis Markup Language](https://developers.google.com/actions/reference/ssml).
 
 Here is a simple example:
@@ -148,18 +148,18 @@ At the end you can save your Intent and test it with the test console on the
 right side of the DialogFlow console or directly with Google Assistant simulator
 or device (see the [step 5](https://github.com/xebia-france/hands-on-assistant/tree/master/google-assistant#5-test-your-fulfillment)).
 
-## 4. Fulfill user intentions using webhook
+## 4. Fulfill user intentions using web hook
 
 As you reach the end of the `Intent` creation, you will see the section **Fulfillment**.
 
 ![intent-fulfillment](screenshots/intent-fulfillment.png)
 
 This is actually the entry point to infinite possibilities, because you are able to
-fulfill user's intentions with your own backend logic!
+fulfill user's intentions with your own back-end logic!
 
 Now check the case `Use Webhook` and start to work on your own fulfillment! In
 this Hands-On we are introducing [Firebase Cloud Function](https://firebase.google.com/docs/functions/)
-to deploy your backend logic. If you feel more comfortable working with other 
+to deploy your back-end logic. If you feel more comfortable working with other 
 solutions, you can totally go with your own choice.
 
 ### 4.1 Set up your Webhook with Firebase functions
@@ -171,7 +171,7 @@ by installing firebase tools:
 $ npm install -g firebase-tools
 ```
 
-Then login with your Goolge account which contains your assistant project:
+Then login with your Google account which contains your assistant project:
 
 ```
 $ firebase login
@@ -266,7 +266,7 @@ Start by:
 
 - name your action on DialogFlow and add it to your app
 - implement a simple fulfillment function
-- name your parameter on DialogFlow andd add it to your app
+- name your parameter on DialogFlow and add it to your app
 - get the argument in your fulfillment function and do something with it
 
 Here is the [API for Actions on Google Node.js SDK](https://developers.google.com/actions/reference/nodejs/AssistantApp).
@@ -276,7 +276,7 @@ Now it's time to release your imagination and create some fulfillment on your ow
 #### Make your app say or tell
 
 ```
-app.ask("Hey, what kind of cuisine do you prefere?")
+app.ask("Hey, what kind of cuisine do you prefer?")
 
 app.tell("You can make a tortilla with potato and eggs!")
 ```
@@ -341,7 +341,7 @@ think of something else to play with the context.
 
 ## 7. Identity
 
-You must also be interested to know how to build an application with richier 
+You must also be interested to know how to build an application with richer 
 experience for your users. We will briefly mention 2 ways to achieve that:
 
 ### Anonymous User Identity
@@ -358,7 +358,7 @@ Add an Intent to tell to the user his anonymous id.
 
 ### User infos
 
-It can be hard in natural langage to ask for permission to get name and address. To do so, the Assistant provides a built-in dialog that requests this information from users, allows them to consent to providing the information, and then provides you the information in the next request to your fulfillment endpoint.
+It can be hard in natural language to ask for permission to get name and address. To do so, the Assistant provides a built-in dialog that requests this information from users, allows them to consent to providing the information, and then provides you the information in the next request to your fulfillment endpoint.
 
 Try to get name and address of the user by using Helper: [User Information/Helper](https://developers.google.com/actions/assistant/helpers#user_information)
 
@@ -368,5 +368,5 @@ Add an Intent to tell to the user his name and his address.
 
 - [Actions on Google Node.js reference](https://developers.google.com/actions/reference/nodejs/AssistantApp)
 - [Actions on Google github](https://github.com/actions-on-google): discover a lot more samples
-- [Xebia Home Assistant](https://github.com/xebia-france/xebia-home-assistant/) developped by Pablo & Benjamin
+- [Xebia Home Assistant](https://github.com/xebia-france/xebia-home-assistant/) developed by Pablo & Benjamin
 - [Codelab: Build an App for the Google Assistant with Firebase and Dialogflow](https://codelabs.developers.google.com/codelabs/assistant-codelab/index.html)

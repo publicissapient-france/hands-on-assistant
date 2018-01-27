@@ -18,14 +18,14 @@ The easiest way is to use their web site: https://alexa.amazon.com
 
 # Exercise 1: Build an Alexa Skill with Lambda (Python)
 
-Start building for Alexa with this quick walkthrough of the skill-building process. 
+Start building for Alexa with this quick walk-through of the skill-building process. 
 You’ll end with a simple but complete Alexa skill that can run on Amazon Echo or 
 any device with Alexa. This tutorial uses the [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit), 
 [AWS Lambda](https://aws.amazon.com/lambda/) and Python.
 
 See here to get started: [Alexa Python Tutorial](https://developer.amazon.com/alexa-skills-kit/alexa-skill-quick-start-tutorial)
 
-The screenshots in the tutorial may not be exactly the same as the lastest AWS
+The screenshots in the tutorial may not be exactly the same as the latest AWS
 console but you should be able to finish it without problem. At the end, you can
 go to their new testing simulator and test your Alexa skill:
 
@@ -52,7 +52,7 @@ with either *fact* or *space fact*. Let's try to make it better, start by:
 
 - create your own slot type (e.g. `factType` with a list of possible fact type)
 - update your intent to get the fact type dynamically
-- update your backend logic to plug some random cat fact using this awesome
+- update your back-end logic to plug some random cat fact using this awesome
 [API](https://catfact.ninja/)
 
 So now whenever someone asks Alexa about cat fact, your skill can give out some
@@ -68,6 +68,6 @@ Mac, or Windows.
 
 # Resource
 
-- [Amazon Alexa Portail](https://developer.amazon.com/alexa)
+- [Amazon Alexa Portal](https://developer.amazon.com/alexa)
 - [Amazon Developer Console](https://developer.amazon.com/edw/home.html#/)
 - [AWS Console](https://console.aws.amazon.com/)
