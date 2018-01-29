@@ -11,7 +11,7 @@
 There will be enough time to finish both hands-on. But if you are more interested 
 by one of the platforms and want to go further, it's totally fine.
 
-> Attention: Google Assistant currently support English (U.S., U.K., Canada, Australia), 
+> Attention: At the time of writing, Google Assistant currently supports English (U.S., U.K., Canada, Australia), 
 French, German, and Japanese. Alexa currently supports English (Australia, Canada, India, UK, US), 
 German and Japanese. 
 
