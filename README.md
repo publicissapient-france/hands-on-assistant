@@ -1,6 +1,6 @@
 # Hands-On Assistant
 
-- [Slide for Google Assistant](https://docs.google.com/presentation/d/12_m04yZxrue1oUDJddaCfJd_UAuNDPkzlTOhK716-YY)
+- Slide for Google Assistant
 - [Slide for Alexa](https://docs.google.com/a/xebia.fr/presentation/d/11HKDcjdbRxAitrWZTK16DXYEEOePF50e3QWepv34e8o)
 
 ## Get Started
